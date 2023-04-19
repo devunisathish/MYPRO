@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <input type="text" placeholder="0" id="input" disabled />
+      </div>
+      <div class="buttons">
+        <!-- Full Erase -->
+        <input type="button" value="C" id="clear" />
+        <!-- Erase Single Value -->
+        <input type="button" value="DEL" id="erase" />
+        <input type="button" value="/" class="input-button" />
+        <input type="button" value="*" class="input-button" />
+
+        <input type="button" value="7" class="input-button" />
+        <input type="button" value="8" class="input-button" />
+        <input type="button" value="9" class="input-button" />
+        <input type="button" value="-" class="input-button" />
+
+        <input type="button" value="6" class="input-button" />
+        <input type="button" value="5" class="input-button" />
+        <input type="button" value="4" class="input-button" />
+        <input type="button" value="+" class="input-button" />
+
+        <input type="button" value="1" class="input-button" />
+        <input type="button" value="2" class="input-button" />
+        <input type="button" value="3" class="input-button" />
+
+        <input type="button" value="=" id="equal" />
+        <input type="button" value="0" class="input-button" />
+        <input type="button" value="." class="input-button" />
+      </div>
+    </div>
+
+    <div class="calculator1">
+      <div class="display1">
+    <h2>Money Denomination</h2>
+	<form> <table class="table">
+		<tr><th><label for="2000">2000 notes:</label></th>
+		<th><input type="number" id="2000" name="2000"></th></tr>
+		<tr><th><label for="500">500 notes:</label></th>
+		<th><input type="number" id="500" name="500"></th></tr>
+		<tr><th><label for="200">200 notes:</label></th>
+		<th><input type="number" id="200" name="200"></th></tr>
+		<tr><th><label for="100">100 notes:</label></th>
+		<th><input type="number" id="100" name="100"></th></tr>
+		<tr><th><label for="50">50 notes:</label></th>
+		<th><input type="number" id="50" name="50"></th></tr>
+		
+		<tr><th></th><th><button type="button" class="glow-on-hover" value="Calculate Total" onclick="calculateTotal1()"> SUBMIT </button></th></tr>
+	</table></form>
+	<div id="result1"></div>
+  </div>
+  </div>
+
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

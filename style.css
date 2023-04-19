@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+body {
+  height: 100vh;
+  background-color: #3BAA80;
+}
+.calculator {
+  width: 400px;
+  background-color: #2E8463;
+  padding: 50px 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgb(40,113,85, 0.4);
+}
+.display {
+  width: 100%;
+}
+.display input {
+  width: 100%;
+  padding: 15px 10px;
+  text-align: right;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 35px;
+}
+.display input::placeholder {
+  color: #B9B6C8;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-top: 40px;
+}
+.buttons input[type="button"] {
+  font-size: 20px;
+  padding: 17px;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+input[type="button"]#equal {
+  grid-row: span 2;
+  background-color: #FA726B;
+}
+input[type="button"][value="0"] {
+  grid-column: span 2;
+}
+
+.calculator1 {
+  width: 400px;
+  background-color: #2E8463;
+  padding: 50px 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 250px;
+  top: 310px;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgb(40,113,85, 0.4);
+  align-items: center;
+}
+.display1 {
+  width: 100%;
+}
+.table{
+  text-align: center;
+  padding-top: 25px;
+  align-content: center;
+
+}
+h2{
+  text-align: center;
+}
+
+
+/* for glow on hover */
+.glow-on-hover {
+  color: rgb(2, 2, 2);
+  background: #a9fa13;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #cccccc;
+  left: 0;
+  top: 0;
+}
+
+@keyframes glowing {
+  0% {
+      background-position: 0 0;
+  }
+
+  50% {
+      background-position: 400% 0;
+  }
+
+  100% {
+      background-position: 0 0;
+  }
+}
